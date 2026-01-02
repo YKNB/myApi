@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "storage",
+      "type": "com.vkstech.elasticsearch.videos.storage.StorageProperties",
+      "sourceType": "com.vkstech.elasticsearch.videos.storage.StorageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "storage.location",
+      "type": "java.lang.String",
+      "sourceType": "com.vkstech.elasticsearch.videos.storage.StorageProperties"
+    }
+  ],
+  "hints": []
+}

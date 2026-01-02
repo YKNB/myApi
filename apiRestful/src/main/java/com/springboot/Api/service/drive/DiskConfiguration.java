@@ -1,0 +1,25 @@
+package com.springboot.Api.service.drive;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+
+public class DiskConfiguration {
+
+    @Bean
+    @Value("${video.storage.dir}")
+    public DiskDrive videoDrive(String videoDriectory) {
+        return new DiskDrive(videoDriectory);
+    }
+
+    @Bean
+    @Value("${profile.storage.dir}")
+    public DiskDrive profileDrive(String profileDirectory) {
+        return new DiskDrive(profileDirectory);
+    }
+
+    @Bean
+    @Value("${thumbnail.storage.dir}")
+    public DiskDrive thumbnailDrive(String thumbnailDirectory) {
+        return new DiskDrive(thumbnailDirectory);
+    }
+}

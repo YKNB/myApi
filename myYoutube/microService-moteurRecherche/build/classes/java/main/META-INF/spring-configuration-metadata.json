@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "storage",
+      "type": "com.myYoutube.scopes.videos.storage.StorageProperties",
+      "sourceType": "com.myYoutube.scopes.videos.storage.StorageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "storage.location",
+      "type": "java.lang.String",
+      "sourceType": "com.myYoutube.scopes.videos.storage.StorageProperties"
+    }
+  ],
+  "hints": []
+}

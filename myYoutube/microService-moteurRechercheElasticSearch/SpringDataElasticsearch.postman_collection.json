@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "677668a5-6830-4ae6-9618-fc93609efde1",
+		"name": "Spring Data Elasticsearch Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bank",
+			"item": [
+				{
+					"name": "Save Bank",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"Bank of India\",\n    \"city\": \"Noida\",\n    \"state\": \"Uttar Pradesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bank/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bank/findAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bank/findByName/India",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank",
+								"findByName",
+								"India"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Save Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"peter\",\n        \"lastName\": \"smith\",\n        \"age\": 20\n    },\n    {\n        \"id\": 2,\n        \"firstName\": \"peter\",\n        \"lastName\": \"brown\",\n        \"age\": 21\n    },\n    {\n        \"id\": 3,\n        \"firstName\": \"mary\",\n        \"lastName\": \"taylor\",\n        \"age\": 22\n    },\n    {\n        \"id\": 4,\n        \"firstName\": \"Lauren\",\n        \"lastName\": \"Jones\",\n        \"age\": 23\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/customer/saveCustomer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"saveCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer/findAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By FirstName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer/findByFirstName/peter",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"findByFirstName",
+								"peter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Elasticsearch",
+			"item": [
+				{
+					"name": "Get Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9200/?pretty",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "pretty",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Index and Settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9200/_all",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9200/customer/_search",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"customer",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bank  Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9200/bank/_search",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"bank",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Customer Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9200/customer/_search?q=firstName:peter",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"customer",
+								"_search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "firstName:peter"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9200/product/_search",
+							"host": [
+								"localhost"
+							],
+							"port": "9200",
+							"path": [
+								"product",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"id101\",\r\n    \"name\": \"Salt\",\r\n    \"price\": 20.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/get",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

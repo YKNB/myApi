@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "storage",
+      "type": "com.majumbum.youtube_clone.scopes.videos.storage.StorageProperties",
+      "sourceType": "com.majumbum.youtube_clone.scopes.videos.storage.StorageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "storage.location",
+      "type": "java.lang.String",
+      "description": "Folder location for storing files",
+      "sourceType": "com.majumbum.youtube_clone.scopes.videos.storage.StorageProperties"
+    }
+  ],
+  "hints": []
+}
